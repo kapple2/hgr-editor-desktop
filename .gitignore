@@ -3,8 +3,7 @@
 /PRD*
 /PLAN*
 
-# ---- Build output ----
-dist/
+# ---- Build output (dist/ is committed on purpose: ready-to-download executables) ----
 build/
 work/
 *.spec.bak

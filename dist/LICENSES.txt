@@ -1,0 +1,24 @@
+HGRTool Desktop - third-party notices
+=====================================
+
+This application bundles an unmodified-in-behaviour copy of HGRTool and wraps it in a native window.
+
+HGRTool  (c) 2025 faddenSoft / Andy McFadden
+  Source: https://github.com/fadden/HGRTool
+  Code: Apache License 2.0   (https://www.apache.org/licenses/LICENSE-2.0)
+  Images and documentation: CC BY-SA 4.0
+  HGRTool Desktop applies small build-time patches to a copy of the HGRTool web files (see ARCHITECTURE.md).
+
+Included with HGRTool (see the About box):
+  * The 108-entry hi-res color palette comes from code in The Graphics Magician,
+    copyright 1984 by Penguin Software.
+  * Button icons: Font Awesome Free (https://fontawesome.com/license/free) -
+    icons CC BY 4.0, fonts SIL OFL 1.1, code MIT.
+  * Ellipse drawing code by Alois Zingl, MIT license.
+
+Python runtime and libraries bundled by PyInstaller:
+  * Python (PSF License), pywebview (BSD-3-Clause), bottle (MIT), proxy_tools (BSD),
+    pythonnet (MIT), clr_loader (MIT), cffi (MIT), pycparser (BSD).
+  * PyInstaller bootloader (GPL-2.0 with the PyInstaller exception, which permits bundling
+    in non-GPL applications).
+  * Windows uses the Microsoft Edge WebView2 runtime installed on the system.

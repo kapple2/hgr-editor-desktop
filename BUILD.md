@@ -111,6 +111,13 @@ CJK KR)이 설치되어 있어야 합니다. PyInstaller로 GTK/WebKit을 묶으
 - **스모크 테스트 실패**: `work\selftest-dist-en.txt` 또는 `work\selftest-dist-ko.txt`를 읽으세요. 각 줄에
   실패한 검사 이름이 있습니다.
 
+## 실행 파일 배포
+
+사람들이 저장소에서 바로 exe를 받을 수 있도록 `dist/`는 일부러 git에 커밋합니다. 바이너리는 diff가 되지 않고
+다시 빌드할 때마다 저장소 기록에 약 26MB(exe 두 개)가 쌓이므로, 코드를 바꿀 때마다가 아니라 릴리스할 때만
+`dist/`를 다시 빌드해 커밋하세요. (GitHub는 100MB를 넘는 파일을 거부하며 현재 파일은 각각 약 13MB입니다.
+기록이 너무 커지면 exe를 GitHub Releases로 옮기세요.)
+
 ## 포함되지 않은 것
 
 코드 서명, 공증(notarization), 설치 프로그램, 자동 업데이트. `src/res/icon.ico`는 원본의 32×32 파비콘입니다.

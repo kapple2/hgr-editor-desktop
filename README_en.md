@@ -68,7 +68,10 @@ format. `hgrtool-local/` itself is never modified; the build verifies its checks
 
 ## Download / build
 
-Windows: run `build_all.bat`; it builds both versions into `dist\`:
+**Just want to use it?** The built executables (Windows) are committed in the [`dist/`](dist) folder of this
+repository. Download the one you want and run it from any folder; nothing needs to be installed.
+
+To build it yourself: run `build_all.bat` on Windows; it builds both versions into `dist\`:
 
 | File | Language |
 |---|---|
@@ -88,7 +91,7 @@ hgrtool-local/   upstream web app (unmodified local copy: HTML, CSS, Font Awesom
 src/             desktop wrapper: Python package, web overlay, translations, build tools, tests
 docs/            screenshots
 build_all.bat    build on Windows (build_all.sh for macOS / Linux)
-dist/            build output (not committed)
+dist/            built executables (Windows): hgrtool.exe (English), hgrtool-ko.exe (Korean)
 LICENSE          Apache License 2.0
 LICENSES.txt     third-party notices
 *.md / *_en.md   documentation: Korean (default) and English (_en)

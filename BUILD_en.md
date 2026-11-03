@@ -110,6 +110,13 @@ venv to confirm the app itself works.
 - **Korean text shows as boxes**: the system has no Hangul font (normal on Windows and macOS; see Linux above).
 - **Smoke test fails**: read `work\selftest-dist-en.txt` or `work\selftest-dist-ko.txt`; each line names the failed check.
 
+## Publishing the executables
+
+`dist/` is committed to git on purpose so people can download the exes straight from the repository.
+Binary files are not diffed and every rebuild adds roughly 26 MB (two exes) to the repository history, so
+rebuild and commit `dist/` only for releases, not for every code change. (GitHub rejects files over 100 MB;
+the current ones are about 13 MB each. If the history grows too large, move the exes to GitHub Releases.)
+
 ## Not included
 
 Code signing, notarization, installers and auto-update. `src/res/icon.ico` is the upstream 32×32

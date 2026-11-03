@@ -64,7 +64,10 @@ Apple II 고해상도(HGR) 그래픽 편집기 **HGRTool**의 휴대용 데스�
 
 ## 다운로드 / 빌드
 
-Windows: `build_all.bat`을 실행하면 두 버전이 `dist\`에 만들어집니다.
+**바로 받아서 쓰기**: 빌드된 실행 파일이 이 저장소의 [`dist/`](dist) 폴더에 들어 있습니다(Windows). 원하는
+파일을 받아 아무 폴더에서나 실행하면 됩니다. 설치가 필요 없습니다.
+
+직접 빌드하려면: Windows에서 `build_all.bat`을 실행하면 두 버전이 `dist\`에 만들어집니다.
 
 | 파일 | 언어 |
 |---|---|
@@ -84,7 +87,7 @@ hgrtool-local/   원본 웹 앱(수정하지 않은 로컬 사본: HTML, CSS, Fo
 src/             데스크톱 래퍼: Python 패키지, 웹 오버레이, 번역, 빌드 도구, 테스트
 docs/            스크린샷
 build_all.bat    Windows 빌드 (macOS/Linux는 build_all.sh)
-dist/            빌드 결과물 (커밋하지 않음)
+dist/            빌드된 실행 파일 (Windows): hgrtool.exe(영어), hgrtool-ko.exe(한국어)
 LICENSE          Apache License 2.0
 LICENSES.txt     외부 구성 요소 고지
 *.md / *_en.md   문서: 한국어(기본)와 영어(_en)
