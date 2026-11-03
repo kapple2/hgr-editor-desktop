@@ -44,3 +44,5 @@ selftest-result.txt
 Thumbs.db
 desktop.ini
 $RECYCLE.BIN/
+
+*.mp4
