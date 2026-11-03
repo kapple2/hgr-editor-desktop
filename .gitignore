@@ -1,0 +1,47 @@
+# ---- Planning docs (kept local). README.md and LICENSE are committed. ----
+/README.txt
+/PRD*
+/PLAN*
+
+# ---- Build output ----
+dist/
+build/
+work/
+*.spec.bak
+
+# Generated web bundle (rebuilt from hgrtool-local/ by src/tools/patch_web.py)
+src/web/
+
+# ---- Python ----
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ---- App runtime data (settings; created next to the exe or in src/ during dev) ----
+hgrtool-data/
+src/hgrtool-data/
+
+# ---- Test / scratch artifacts ----
+selftest-result.txt
+*.log
+
+# ---- Editors / IDEs ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/

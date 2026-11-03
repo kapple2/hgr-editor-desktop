@@ -1,0 +1,91 @@
+
+
+/* ======================================================================================
+ * HGRTool Desktop overlay (appended to editor.css by tools/patch_web.py).
+ * Compact left bar + an always-visible color palette.
+ * ====================================================================================== */
+
+#leftbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    grid-template-areas: none;
+    grid-auto-rows: auto;
+    align-content: start;
+    overflow-x: hidden;
+    overflow-y: auto;        /* only scrolls when the window is shorter than the content */
+    min-height: 0;
+    scrollbar-width: thin;
+}
+#leftbar .left-header1,
+#leftbar .left-header2,
+#leftbar .left-header3 {
+    grid-area: auto;
+    grid-column: 1 / -1;
+    line-height: 26px;
+    height: 26px;
+    text-align: center;
+}
+#leftbar .icon-button {
+    height: 44px;
+    gap: 2px;
+    padding: 2px;
+    font-size: 13px;
+    justify-content: center;
+}
+#leftbar .icon-button i {
+    font-size: 18px;
+}
+
+/* ---- palette panel ---- */
+#palette-panel {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 0 1px 4px 1px;
+}
+#palette-panel .left-header3 {
+    flex: none;
+}
+#palette-current {
+    flex: none;
+    width: 100%;
+    height: 36px;
+    border: 1px solid #282828;
+    background: #282828;
+    display: block;
+}
+#palette-panel #hgr-color-body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 24px);
+    grid-auto-flow: row;
+    gap: 1px;
+}
+#palette-panel #hgr-dither-body {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(10, 16px);
+    grid-auto-flow: column;
+    gap: 1px;
+}
+#palette-panel .swatch-button {
+    width: auto;
+    height: auto;
+    min-width: 0;
+    padding: 1px;
+    overflow: hidden;
+}
+#palette-panel .swatch-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+#palette-panel .swatch-button.selected {
+    outline: 2px solid #ffffff;
+    outline-offset: -2px;
+    position: relative;
+    z-index: 1;
+}

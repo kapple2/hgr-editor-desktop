@@ -1,0 +1,23 @@
+# HGRTool Desktop - runtime dependencies (everything bundled into the exe).
+# Install into the project venv only:  .venv\Scripts\python.exe -m pip install -r src\requirements.txt
+# Build / test tools are in requirements-dev.txt.
+
+pywebview==6.2.1            # native window + file dialogs + JS bridge
+bottle==0.13.4              # pywebview dependency
+proxy_tools==0.1.0          # pywebview dependency
+typing_extensions==4.16.0   # pywebview dependency
+
+# Windows backend (WebView2 through .NET). Not installed on macOS / Linux.
+pythonnet==3.2.1 ; sys_platform == "win32"
+clr_loader==0.3.1 ; sys_platform == "win32"
+cffi==2.1.1 ; sys_platform == "win32"
+pycparser==3.12 ; sys_platform == "win32"
+
+# macOS backend (WKWebView). Versions are not pinned yet: macOS is untested.
+pyobjc-core ; sys_platform == "darwin"
+pyobjc-framework-Cocoa ; sys_platform == "darwin"
+pyobjc-framework-WebKit ; sys_platform == "darwin"
+pyobjc-framework-Quartz ; sys_platform == "darwin"
+
+# Linux backend (GTK + WebKit2GTK) uses system packages (python3-gi, gir1.2-webkit2-4.1);
+# see BUILD.md. They are not installed from PyPI.
